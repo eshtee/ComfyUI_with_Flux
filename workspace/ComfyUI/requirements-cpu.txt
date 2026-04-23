@@ -1,0 +1,9 @@
+# CPU-Specific Dependencies
+# These modules are optimized for CPU-only environments
+
+# Accelerated Inference (CPU-optimized)
+onnxruntime
+
+# Note: easy_dwpose requires onnxruntime-gpu which is not available on all architectures
+# For CPU builds on ARM64/Apple Silicon, we skip easy_dwpose to avoid conflicts
+# Users can manually install pose detection alternatives if needed 

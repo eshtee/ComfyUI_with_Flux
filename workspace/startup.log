@@ -1,0 +1,86 @@
+2025-06-29 23:20:14 [INFO] StartupScript: ============================================================
+2025-06-29 23:20:14 [INFO] StartupScript: ComfyUI Startup Script - Simplified Python Version
+2025-06-29 23:20:14 [INFO] StartupScript: ============================================================
+2025-06-29 23:20:14 [INFO] StartupScript: Workspace: /workspace
+2025-06-29 23:20:14 [INFO] StartupScript: Dependency preset: standard
+2025-06-29 23:20:14 [INFO] StartupScript: Log file: /workspace/startup.log
+2025-06-29 23:20:14 [INFO] StartupScript: Step 2/7: Setting up authentication...
+2025-06-29 23:20:14 [INFO] StartupScript: === Setting up model authentication ===
+2025-06-29 23:20:14 [INFO] StartupScript: Setting up HuggingFace authentication...
+2025-06-29 23:20:15 [INFO] StartupScript: ✓ HuggingFace authentication successful
+2025-06-29 23:20:15 [INFO] StartupScript: Setting up CivitAI authentication...
+2025-06-29 23:20:15 [INFO] StartupScript: ✓ CivitAI token configured
+2025-06-29 23:20:15 [INFO] StartupScript: ✓ Model authentication setup completed
+2025-06-29 23:20:15 [INFO] StartupScript: ✓ Authentication setup completed
+2025-06-29 23:20:15 [INFO] StartupScript: Step 3/7: Setting up ComfyUI environment...
+2025-06-29 23:20:15 [INFO] StartupScript: First run - setting up ComfyUI environment...
+2025-06-29 23:20:15 [INFO] StartupScript: Application files copied successfully
+2025-06-29 23:20:15 [INFO] StartupScript: Checking and installing dependencies...
+2025-06-29 23:20:15 [INFO] StartupScript: Using dependency preset: standard
+2025-06-29 23:20:15 [INFO] StartupScript: Downloading missing dependencies...
+2025-06-29 23:20:44 [INFO] StartupScript: ✓ All dependencies downloaded successfully
+2025-06-29 23:20:44 [INFO] StartupScript: Setting up ComfyUI workflow templates...
+2025-06-29 23:20:44 [INFO] StartupScript: Copying 21 workflow templates...
+2025-06-29 23:20:44 [INFO] StartupScript: ✓ Successfully copied 21 workflow templates
+2025-06-29 23:20:44 [INFO] StartupScript: Setup completed - marker file created
+2025-06-29 23:20:44 [INFO] StartupScript: ✓ ComfyUI environment setup completed
+2025-06-29 23:20:44 [INFO] StartupScript: Step 4/7: Initializing service manager...
+2025-06-29 23:20:44 [INFO] StartupScript: ✓ Service manager initialized
+2025-06-29 23:20:44 [INFO] StartupScript: Step 5/7: Starting additional services...
+2025-06-29 23:20:44 [INFO] StartupScript: Installing terminal dependencies...
+2025-06-29 23:20:44 [INFO] StartupScript: ✓ Removed conflicting package: notebook-shim
+2025-06-29 23:20:45 [INFO] StartupScript: ✓ Removed conflicting package: notebook
+2025-06-29 23:20:45 [INFO] StartupScript: ✓ traitlets>=5.9.0 installed/updated
+2025-06-29 23:20:46 [INFO] StartupScript: ✓ terminado>=0.15.0 installed/updated
+2025-06-29 23:20:47 [INFO] StartupScript: ✓ jupyter-server-terminals>=0.4.4 installed/updated
+2025-06-29 23:20:56 [INFO] StartupScript: ✓ jupyterlab-server>=2.22.0 installed/updated
+2025-06-29 23:21:07 [INFO] StartupScript: ✓ jupyterlab>=4.0.0 installed/updated
+2025-06-29 23:21:07 [INFO] StartupScript: Starting JupyterLab with terminal support...
+2025-06-29 23:21:07 [INFO] StartupScript: Creating JupyterLab configuration...
+2025-06-29 23:21:07 [INFO] StartupScript: ✓ JupyterLab config created at: /workspace/.jupyter/config/jupyter_lab_config.py
+2025-06-29 23:21:07 [INFO] StartupScript: ✓ Jupyter Server config created at: /workspace/.jupyter/config/jupyter_server_config.py
+2025-06-29 23:21:07 [INFO] StartupScript: ✓ Set secure permissions for /workspace/.jupyter/runtime
+2025-06-29 23:21:07 [INFO] StartupScript: ✓ Set Jupyter environment variables
+2025-06-29 23:21:07 [INFO] StartupScript: Starting JupyterLab (logs: /workspace/jupyter_startup.log)...
+2025-06-29 23:21:07 [INFO] StartupScript: ✓ JupyterLab started with PID: 166
+2025-06-29 23:21:07 [INFO] StartupScript: ✓ JupyterLab accessible at: http://localhost:8888/lab
+2025-06-29 23:21:07 [INFO] StartupScript: ✓ Terminal should now be available in JupyterLab
+2025-06-29 23:21:10 [INFO] StartupScript: ✓ JupyterLab process is running successfully
+2025-06-29 23:21:10 [INFO] StartupScript: ✓ To access terminal: File > New > Terminal (or use Launcher)
+2025-06-29 23:21:10 [INFO] StartupScript: ✓ JupyterLab started on port 8888
+2025-06-29 23:21:10 [INFO] StartupScript: Starting Flux Train UI...
+2025-06-29 23:21:10 [INFO] StartupScript: Flux Train UI started with PID: 169
+2025-06-29 23:21:10 [INFO] StartupScript: Flux Train UI accessible at: http://localhost:7860
+2025-06-29 23:21:12 [INFO] StartupScript: ✓ Flux Train UI started on port 7860
+2025-06-29 23:21:12 [INFO] StartupScript: ✓ Additional services startup completed
+2025-06-29 23:21:12 [INFO] StartupScript: Step 6/7: Validating environment...
+2025-06-29 23:21:12 [INFO] StartupScript: Detecting CUDA availability...
+2025-06-29 23:21:12 [WARNING] StartupScript: Command failed with code 1: which nvidia-smi
+2025-06-29 23:21:12 [INFO] StartupScript: nvidia-smi not found - CUDA not available
+2025-06-29 23:21:12 [INFO] StartupScript: ! CUDA not detected - using CPU mode
+2025-06-29 23:21:12 [INFO] StartupScript: ✓ Environment validation completed
+2025-06-29 23:21:12 [INFO] StartupScript: Step 7/7: Starting ComfyUI...
+2025-06-29 23:21:12 [INFO] StartupScript: ============================================================
+2025-06-29 23:21:12 [INFO] StartupScript: Startup sequence completed successfully!
+2025-06-29 23:21:12 [INFO] StartupScript: ============================================================
+2025-06-29 23:21:12 [INFO] StartupScript: Step 1/7: Performing workspace cleanup...
+2025-06-29 23:21:12 [INFO] StartupScript: === Performing startup cleanup ===
+2025-06-29 23:21:12 [INFO] StartupScript: Cleanup mode: Standard
+2025-06-29 23:21:12 [INFO] StartupScript: Performing workspace cleanup...
+2025-06-29 23:21:12 [INFO] StartupScript: Removing: /opt/app/workflows
+2025-06-29 23:21:12 [INFO] StartupScript: Removing: /workspace/workflows
+2025-06-29 23:21:12 [INFO] StartupScript: Removing: /workspace/models
+2025-06-29 23:21:12 [INFO] StartupScript: ✓ Workspace cleanup completed
+2025-06-29 23:21:12 [INFO] StartupScript: Cleaning up build artifacts...
+2025-06-29 23:21:13 [INFO] StartupScript: Removed pip cache
+2025-06-29 23:21:13 [INFO] StartupScript: ✓ Build artifacts cleanup completed
+2025-06-29 23:21:13 [INFO] StartupScript: Available disk space after cleanup: 438GB
+2025-06-29 23:21:13 [INFO] StartupScript: === Startup cleanup completed ===
+2025-06-29 23:21:13 [INFO] StartupScript: ✓ Workspace cleanup completed
+2025-06-29 23:21:13 [INFO] StartupScript: Starting ComfyUI...
+2025-06-29 23:21:13 [INFO] StartupScript: Detecting CUDA availability...
+2025-06-29 23:21:13 [WARNING] StartupScript: Command failed with code 1: which nvidia-smi
+2025-06-29 23:21:13 [INFO] StartupScript: nvidia-smi not found - CUDA not available
+2025-06-29 23:21:13 [INFO] StartupScript: Starting ComfyUI in CPU-only mode...
+2025-06-29 23:21:13 [INFO] StartupScript: ComfyUI will be accessible at: http://localhost:8188
+2025-06-29 23:21:13 [INFO] StartupScript: Executing: python3 main.py --listen --port=8188 --cpu

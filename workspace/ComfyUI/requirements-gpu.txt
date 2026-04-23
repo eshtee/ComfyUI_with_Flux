@@ -1,0 +1,16 @@
+# GPU-Specific Dependencies
+# These modules are optimized for or require GPU acceleration
+
+# PyTorch Acceleration and Optimization
+torchao
+
+# GPU Quantization and Optimization
+bitsandbytes
+optimum-quanto
+
+# Accelerated Inference (GPU-optimized)
+# Note: onnxruntime-gpu may fail on ARM64/Apple Silicon - handled in Dockerfile
+onnxruntime-gpu
+
+# AI Toolkit Dependencies (moved to individual handling in Dockerfile)
+# easy_dwpose requires onnxruntime-gpu which may not be available on all architectures 

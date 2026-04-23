@@ -1,0 +1,92 @@
+# Core ComfyUI Dependencies
+comfyui-frontend-package
+comfyui-workflow-templates
+comfyui-embedded-docs
+torchsde
+aiohttp
+aiohttp-cors
+psutil
+
+# PyTorch and ML Core (versions will be handled by Dockerfile)
+# torch - handled separately per variant
+# torchvision - handled separately per variant
+# torchao - GPU only, in requirements-gpu.txt
+transformers
+diffusers
+accelerate
+safetensors
+
+# HuggingFace and Model Management
+huggingface_hub
+peft
+hf_transfer
+
+# AI Toolkit Dependencies  
+# Note: easy_dwpose installation is handled in Dockerfile with error handling
+lycoris-lora
+flatten_json
+pyyaml
+oyaml
+tensorboard
+kornia
+invisible-watermark
+einops
+toml
+albumentations
+albucore
+pydantic
+pydantic-settings
+omegaconf
+k-diffusion
+open-clip-torch
+timm
+prodigyopt
+controlnet_aux
+python-dotenv
+lpips
+pytorch_fid
+sentencepiece
+gradio
+python-slugify
+opencv-python
+pytorch-wavelets
+matplotlib
+
+# Video/Audio Processing
+av
+imageio-ffmpeg
+
+# Scientific Computing and Utilities
+numba
+scikit-image
+ultralytics
+scipy
+numpy
+spandrel
+alembic
+
+# Image Processing
+piexif
+segment-anything
+
+# PyTorch Lightning
+pytorch-lightning
+
+# Development Environment
+pandas
+seaborn
+bokeh
+traitlets>=5.9.0
+terminado>=0.15.0
+jupyter-server-terminals>=0.4.4
+jupyterlab-server>=2.22.0
+jupyterlab>=4.0.0
+jupyter-server>=2.0.0
+ipykernel
+ipython
+sympy
+
+# Utilities
+requests
+tqdm
+dill 

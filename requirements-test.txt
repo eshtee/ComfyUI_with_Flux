@@ -1,0 +1,19 @@
+# Testing framework dependencies for ComfyUI Docker project
+# These are only needed for running tests, not for the main application
+
+# HTTP testing
+requests>=2.31.0
+
+# System monitoring and health checks
+psutil>=5.9.0
+
+# Testing framework (optional, for extended testing)
+pytest>=7.4.0
+pytest-docker>=2.0.0
+
+# Code quality tools
+flake8>=6.0.0
+black>=23.0.0
+
+# Documentation tools (optional)
+markdown>=3.4.0 

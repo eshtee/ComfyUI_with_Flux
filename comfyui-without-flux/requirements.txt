@@ -1,0 +1,10 @@
+# Main Requirements File for ComfyUI with Flux
+# This file includes base dependencies that work on both CPU and GPU
+# 
+# For GPU-specific optimizations, see: requirements-gpu.txt
+# For CPU-specific optimizations, see: requirements-cpu.txt
+# Base requirements in: requirements-base.txt
+#
+# Installation is handled conditionally by the Dockerfile based on TORCH_VARIANT
+
+-r requirements-base.txt 

@@ -1,0 +1,84 @@
+# Git files and directories
+.git/
+.gitignore
+.gitattributes
+
+# Python cache and virtual environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+.env
+
+# Development and IDE files
+.cursor/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Documentation and images (not needed for build)
+README.md
+README_short.md
+*.png
+*.jpg
+*.jpeg
+*.gif
+video_screenshot.png
+tcp_port_mappings.png
+JupyterLab_token.png
+face_character_sheet_openpose.png
+body_character_sheet_openpose.png
+
+# Build artifacts and logs
+*.log
+*.tmp
+build-info.json
+test-report-*.json
+.DS_Store
+Thumbs.db
+
+# Testing and cleanup artifacts
+tests/
+tools/
+requirements-test.txt
+
+# Development requirements
+requirements-dev.txt
+
+# License file (not needed for runtime)
+LICENSE
+
+# Docker compose files
+docker-compose*.yml
+docker-compose*.yaml
+
+# Test files
+test/
+tests/
+*_test.py
+test_*.py
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Refactor artifacts (development only)
+REFACTOR_ANALYSIS.md
+IMPLEMENTATION_SUMMARY.md
+CONSOLIDATION_SUMMARY.md
+dependencies_old.yaml
+scripts/build_docker_old.py
+scripts/start-on-workspace.sh
+scripts/manage_dependencies.py
+scripts/reset-workspace.sh
+scripts/run-comfyui.sh
+
+# Cache directories
+.pytest_cache/ 

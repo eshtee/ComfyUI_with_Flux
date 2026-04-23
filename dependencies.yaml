@@ -1,0 +1,227 @@
+# ComfyUI with Flux - Dependencies Configuration
+# ==============================================
+# 
+# This file defines all external dependencies for the ComfyUI project.
+# Dependencies are organized by category and priority for better management.
+
+# Metadata
+version: "2.0"
+description: "ComfyUI with Flux dependencies"
+last_updated: "2025-06-27"
+
+# Core dependencies (always downloaded)
+core_dependencies:
+  ai_toolkit:
+    type: git
+    url: https://github.com/ostris/ai-toolkit.git
+    destination: ai-toolkit
+    description: "AI training toolkit for Flux models"
+    priority: high
+    
+  comfyui_manager:
+    type: git
+    url: https://github.com/ltdrdata/ComfyUI-Manager.git
+    destination: ComfyUI/custom_nodes/ComfyUI-Manager
+    description: "Essential ComfyUI node manager"
+    priority: high
+
+# Essential models (high priority)
+essential_models:
+  meagen_lora:
+    type: huggingface
+    repo_id: eshtee/meagen-inf
+    filename: meagen-inf.safetensors
+    destination: ComfyUI/models/loras/meagen-inf.safetensors
+    description: "MeaGen LoRA model for enhanced generation"
+    priority: high
+    enabled: true
+
+# Optional models (downloaded based on configuration)
+optional_models:
+  flux_dev_model:
+    type: huggingface
+    repo_id: black-forest-labs/FLUX.1-dev
+    filename: flux1-dev.safetensors
+    destination: ComfyUI/models/diffusion_models/flux1-dev.safetensors
+    description: "FLUX.1 dev diffusion model"
+    priority: medium
+    size_mb: 11900
+    enabled: true
+    
+  clip_text_encoder:
+    type: huggingface
+    repo_id: comfyanonymous/flux_text_encoders
+    filename: clip_l.safetensors
+    destination: ComfyUI/models/clip/clip_l.safetensors
+    description: "CLIP text encoder for FLUX"
+    priority: medium
+    size_mb: 235
+    enabled: true
+    
+  t5_text_encoder:
+    type: huggingface
+    repo_id: comfyanonymous/flux_text_encoders
+    filename: t5xxl_fp8_e4m3fn.safetensors
+    destination: ComfyUI/models/clip/t5xxl_fp8_e4m3fn.safetensors
+    description: "T5 text encoder (FP8 optimized)"
+    priority: medium
+    size_mb: 4800
+    enabled: true
+    
+  flux_vae:
+    type: huggingface
+    repo_id: black-forest-labs/FLUX.1-dev
+    filename: ae.safetensors
+    destination: ComfyUI/models/vae/ae.safetensors
+    description: "FLUX autoencoder/VAE"
+    priority: medium
+    size_mb: 335
+    enabled: true
+  
+  Round_Breasts_Slim_Waist_lora:
+    type: file
+    url: "https://civitai.com/api/download/models/1782533?type=Model&format=SafeTensor"
+    destination: ComfyUI/models/loras/Round_Breasts_Slim_Waist_lora.safetensors
+    description: "4x UltraSharp upscaling model"
+    priority: low
+    enabled: true
+
+  Hourglass_Body:
+    type: file
+    url: "https://civitai.com/api/download/models/1668530?type=Model&format=SafeTensor"
+    destination: ComfyUI/models/loras/Hourglass_Body_lora.safetensors
+    description: "Hourglass_Body"
+    priority: low
+    enabled: true
+
+  Micro_Bikini:
+    type: file
+    url: "https://civitai.com/api/download/models/1857758?type=Model&format=SafeTensor"
+    destination: ComfyUI/models/loras/Micro_Bikini_lora.safetensors
+    description: "Micro_Bikini"
+    priority: low
+    enabled: true
+
+  Jean_Shorts:
+    type: file
+    url: "https://civitai.com/api/download/models/817482?type=Model&format=SafeTensor"
+    destination: ComfyUI/models/loras/Jean_Shorts_lora.safetensors
+    description: "Jean_Shorts"
+    priority: low
+    enabled: true
+
+
+    
+  jib_mix_checkpoint:
+    type: file
+    url: "https://civitai.com/api/download/models/1755367?type=Model&format=SafeTensor&size=pruned&fp=fp8"
+    destination: ComfyUI/models/checkpoints/Jib_Mix_Flux.safetensors
+    description: "Jib Mix FLUX checkpoint (FP8 pruned)"
+    priority: low
+    size_mb: 5800
+    enabled: false
+
+# Optional custom nodes (can be enabled as needed)
+optional_nodes:
+  custom_scripts:
+    type: git
+    url: https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git
+    destination: ComfyUI/custom_nodes/ComfyUI-Custom-Scripts
+    description: "Additional custom scripts for ComfyUI"
+    priority: low
+    enabled: false
+    
+  x_flux_nodes:
+    type: git
+    url: https://github.com/XLabs-AI/x-flux-comfyui.git
+    destination: ComfyUI/custom_nodes/x-flux-comfyui
+    description: "X-Labs FLUX ComfyUI nodes"
+    priority: medium
+    enabled: true
+    
+  flowty_ldsr:
+    type: git
+    url: https://github.com/flowtyone/ComfyUI-Flowty-LDSR.git
+    destination: ComfyUI/custom_nodes/ComfyUI-Flowty-LDSR
+    description: "LDSR upscaling nodes"
+    priority: low
+    enabled: false
+    
+  supir_nodes:
+    type: git
+    url: https://github.com/kijai/ComfyUI-SUPIR.git
+    destination: ComfyUI/custom_nodes/ComfyUI-SUPIR
+    description: "SUPIR upscaling nodes"
+    priority: low
+    enabled: false
+    
+  kj_nodes:
+    type: git
+    url: https://github.com/kijai/ComfyUI-KJNodes.git
+    destination: ComfyUI/custom_nodes/ComfyUI-KJNodes
+    description: "KJ utility nodes"
+    priority: medium
+    enabled: true
+    
+  rgthree_nodes:
+    type: git
+    url: https://github.com/rgthree/rgthree-comfy.git
+    destination: ComfyUI/custom_nodes/rgthree-comfy
+    description: "RGThree utility nodes"
+    priority: medium
+    enabled: false
+    
+  video_helper:
+    type: git
+    url: https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git
+    destination: ComfyUI/custom_nodes/ComfyUI-VideoHelperSuite
+    description: "Video processing helper suite"
+    priority: low
+    enabled: false
+    
+  controlnet_aux:
+    type: git
+    url: https://github.com/Fannovel16/comfyui_controlnet_aux.git
+    destination: ComfyUI/custom_nodes/comfyui_controlnet_aux
+    description: "ControlNet auxiliary nodes"
+    priority: medium
+    enabled: false
+    
+  essentials:
+    type: git
+    url: https://github.com/cubiq/ComfyUI_essentials.git
+    destination: ComfyUI/custom_nodes/ComfyUI_essentials
+    description: "Essential utility nodes"
+    priority: medium
+    enabled: true
+
+# Download configurations
+download_config:
+  max_concurrent: 3
+  retry_attempts: 3
+  timeout_seconds: 300
+  verify_checksums: true
+  
+# Installation presets
+presets:
+  minimal:
+    description: "Minimal installation with core dependencies only"
+    includes:
+      - core_dependencies
+      - essential_models
+      - optional_nodes     
+  standard:
+    description: "Standard installation with common models and nodes"
+    includes:
+      - core_dependencies
+      - essential_models
+      - optional_nodes
+      # - optional_models: [clip_text_encoder]
+    
+  full:
+    description: "Full installation with all available dependencies"
+    includes:
+      - core_dependencies
+      - essential_models
+      - optional_models
+      - optional_nodes 

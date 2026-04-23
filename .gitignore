@@ -1,1 +1,9 @@
 .idea
+.cursor
+.venv
+build_and_run_commands.md
+**/ComfyUI/custom_nodes/** 
+**/ComfyUI/models/**
+workspace
+**/__pycache__
+**/__pycache__/**

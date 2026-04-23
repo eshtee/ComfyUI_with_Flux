@@ -1,0 +1,114 @@
+# This file defines all external dependencies for the ComfyUI project.
+# The `manage_dependencies.py` script will parse this file to download
+# all the necessary models, custom nodes, and other assets.
+
+# The structure is a list of items, where each item has a `type`
+# (git or file), a `destination` path, and a `url`.
+
+dependencies:  
+
+  # -------------------------
+  # AI Toolkit
+  # -------------------------
+  - type: git
+    destination: ai-toolkit
+    url: https://github.com/ostris/ai-toolkit.git
+
+  # -------------------------
+  # Custom Nodes
+  # -------------------------
+  - type: git
+    destination: ComfyUI/custom_nodes/ComfyUI-Manager
+    url: https://github.com/ltdrdata/ComfyUI-Manager.git
+  # - type: git
+  #   destination: ComfyUI/custom_nodes/ComfyUI-Custom-Scripts
+  #   url: https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git
+  # - type: git
+  #   destination: ComfyUI/custom_nodes/x-flux-comfyui
+  #   url: https://github.com/XLabs-AI/x-flux-comfyui.git
+  # - type: git
+  #   destination: ComfyUI/custom_nodes/ComfyUI-Flowty-LDSR
+  #   url: https://github.com/flowtyone/ComfyUI-Flowty-LDSR.git
+  # - type: git
+  #   destination: ComfyUI/custom_nodes/ComfyUI-SUPIR
+  #   url: https://github.com/kijai/ComfyUI-SUPIR.git
+  # - type: git
+  #   destination: ComfyUI/custom_nodes/ComfyUI-KJNodes
+  #   url: https://github.com/kijai/ComfyUI-KJNodes.git
+  # - type: git
+  #   destination: ComfyUI/custom_nodes/rgthree-comfy
+  #   url: https://github.com/rgthree/rgthree-comfy.git
+  # - type: git
+  #   destination: ComfyUI/custom_nodes/ComfyUI_JPS-Nodes
+  #   url: https://github.com/JPS-GER/ComfyUI_JPS-Nodes.git
+  # - type: git
+  #   destination: ComfyUI/custom_nodes/ComfyUI_Comfyroll_CustomNodes
+  #   url: https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes.git
+  # - type: git
+  #   destination: ComfyUI/custom_nodes/comfy-plasma
+  #   url: https://github.com/Jordach/comfy-plasma.git
+  # - type: git
+  #   destination: ComfyUI/custom_nodes/ComfyUI-VideoHelperSuite
+  #   url: https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git
+  # - type: git
+  #   destination: ComfyUI/custom_nodes/ComfyUI-AdvancedLivePortrait
+  #   url: https://github.com/PowerHouseMan/ComfyUI-AdvancedLivePortrait.git
+  # - type: git
+  #   destination: ComfyUI/custom_nodes/ComfyUI-Impact-Pack
+  #   url: https://github.com/ltdrdata/ComfyUI-Impact-Pack.git
+  # - type: git
+  #   destination: ComfyUI/custom_nodes/ComfyUI-Impact-Subpack
+  #   url: https://github.com/ltdrdata/ComfyUI-Impact-Subpack
+  # - type: git
+  #   destination: ComfyUI/custom_nodes/comfyui_controlnet_aux
+  #   url: https://github.com/Fannovel16/comfyui_controlnet_aux.git
+  # - type: git
+  #   destination: ComfyUI/custom_nodes/ComfyUI_UltimateSDUpscale
+  #   url: https://github.com/ssitu/ComfyUI_UltimateSDUpscale
+  # - type: git
+  #   destination: ComfyUI/custom_nodes/ComfyUI-Easy-Use
+  #   url: https://github.com/yolain/ComfyUI-Easy-Use.git
+  # - type: git
+  #   destination: ComfyUI/custom_nodes/ComfyUI-Florence2
+  #   url: https://github.com/kijai/ComfyUI-Florence2.git
+  # - type: git
+  #   destination: ComfyUI/custom_nodes/was-node-suite-comfyui
+  #   url: https://github.com/WASasquatch/was-node-suite-comfyui.git
+  # - type: git
+  #   destination: ComfyUI/custom_nodes/ComfyUI-Logic
+  #   url: https://github.com/theUpsider/ComfyUI-Logic.git
+  # - type: git
+  #   destination: ComfyUI/custom_nodes/ComfyUI_essentials
+  #   url: https://github.com/cubiq/ComfyUI_essentials.git
+
+  # -------------------------
+  # Models & Checkpoints
+  # -------------------------
+ 
+  # - type: file
+  #   destination: ComfyUI/models/upscale_models/4x-UltraSharp.pth
+  #   url: "https://civitai.com/api/download/models/125843?type=Model&format=PickleTensor"
+  # - type: file
+  #   destination: ComfyUI/models/checkpoints/Jib_Mix_Flux.safetensors
+  #   url: "https://civitai.com/api/download/models/1755367?type=Model&format=SafeTensor&size=pruned&fp=fp8"    
+  - type: huggingface
+    repo_id: eshtee/meagen-inf
+    filename: meagen-inf.safetensors
+    destination: ComfyUI/models/loras/meagen-inf.safetensors
+  # - type: huggingface
+  #   repo_id: black-forest-labs/FLUX.1-dev
+  #   filename: flux1-dev.safetensors
+  #   destination: ComfyUI/models/diffusion_models/flux1-dev.safetensors
+  # - type: huggingface
+  #   repo_id: comfyanonymous/flux_text_encoders
+  #   filename: clip_l.safetensors
+  #   destination: ComfyUI/models/clip/clip_l.safetensors
+  # - type: huggingface
+  #   repo_id: comfyanonymous/flux_text_encoders
+  #   filename: t5xxl_fp8_e4m3fn.safetensors
+  #   destination: ComfyUI/models/clip/t5xxl_fp8_e4m3fn.safetensors
+  # - type: huggingface
+  #   repo_id: black-forest-labs/FLUX.1-dev
+  #   filename: ae.safetensors
+  #   destination: ComfyUI/models/vae/ae.safetensors
+

@@ -1,0 +1,10 @@
+{
+  "build_date": "2025-06-27T14:19:33.960558",
+  "image": "syedahmed/comfyui:v3.4",
+  "torch_variant": "cu121",
+  "python_version": "3.10",
+  "comfyui_version": "latest",
+  "platforms": null,
+  "runpod_optimized": true,
+  "git_commit": "61a6f520"
+}
